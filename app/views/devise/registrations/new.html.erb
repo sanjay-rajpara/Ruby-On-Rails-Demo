@@ -1,23 +1,105 @@
-<div class="authform">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ROR</title>
+    <%= stylesheet_link_tag "vendors/bootstrap/dist/css/bootstrap.min.css"%>
+    <%= stylesheet_link_tag "vendors/css/style.css"%>
+  </head>
+  <body>
+<div id="account-form-container" class="center-vertical">
+  
   <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :role => 'form'}) do |f| %>
-    <h3>Sign up</h3>
+  <div class ="form-horizontal well">
+    <h2>Sign Up</h2>
+    <h6 id="sub1">Please tell us a little about yourself.</h6>
     <%= devise_error_messages! %>
+    <hr/>
     <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+      <%= f.label :name, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+        <%= f.text_field :name, :autofocus => true, :class => 'form-control', :id => 'name-tf' %>
+      </div>
     </div>
     <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
+      <%= f.label :email, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+        <%= f.email_field :email, :class => 'form-control', :id => 'email-tf' %>
+      </div>
     </div>
     <div class="form-group">
-      <%= f.label :password %>
-      <%= f.password_field :password, class: 'form-control' %>
+      <%= f.label :role, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+       <%= f.select :role,  [['----Please Select----',''],['Admin','Admin'],['Manager','Manager'],['Employee','Employee']], {}, {class: "form-control", :id => 'role-tf'} %>
+      </div>
     </div>
     <div class="form-group">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
+      <%= f.label :password, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+        <%= f.password_field :password, :class => 'form-control', :id => 'pass-tf' %>
+      </div>
     </div>
-     <%= f.submit 'Sign up', :class => 'button right' %>
+    <hr/>
+    <h6 id="sub2"></h6>
+    <div class="form-group">
+      <%= f.label :password_confirmation, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+        <%= f.password_field :password_confirmation, :class => 'form-control', :id => 'passc-tf' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :status, :class => "control-label col-sm-3" %>
+      <div class="col-sm-9">
+      <%= f.radio_button :status, 'Enabled', :checked => true %><spam class= enb>Enable</spam>
+      <%= f.radio_button :status, 'Disabled' %><spam class= enb>Disable</spam>
+      </div>
+    </div>
+    <hr/>
+    <div class="form-buttons">
+     <%= f.submit 'Sign up', :class => 'btn btn-default', :id => 'sign_up_btn' %>
+    </div>
+    <div class="clearfix"></div>
+    </div>
+  </form>
   <% end %>
+
 </div>
+ <div class="modal-form-errors modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close">x</button>
+        <h4>Whoops!</h4>
+      </div>
+      <div class="modal-body">It looks like there was a problem.
+        <ul></ul>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-alert modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--button.close(data-dismiss='modal') x-->
+        <h4></h4>
+      </div>
+      <div class="modal-body">
+        <p>Your account has been created.</br>Click OK to return to the User page</p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" id="ok" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+  <%= javascript_include_tag "vendors/jquery-2.2.3.min.js"%>
+  <%= javascript_include_tag "vendors/jquery.form.min.js"%>
+  <%= javascript_include_tag "vendors/bootstrap/dist/js/bootstrap.min.js"%>
+  <%= javascript_include_tag "signupValidator", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "signupuser", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "signupController", "data-turbolinks-track" => true %>
+</body>
+</html>

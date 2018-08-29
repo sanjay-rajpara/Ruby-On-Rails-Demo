@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mytravelshield App/Features</title>
+<%= stylesheet_link_tag  "vendors/bootstrap.css"%>
+<%= stylesheet_link_tag  "vendors/owl.carousel.css"%>
+<%= stylesheet_link_tag  "vendors/owl.theme.css"%>
+<%= stylesheet_link_tag  "http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"%>
+<%= stylesheet_link_tag  "vendors/styles.css"%>
+<%= stylesheet_link_tag  "vendors/responsive.css"%>
+</head>
+<body>
+  <div class="header">
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="row">
+          <div class="navbar-header">
+            <button type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/visitors/index" class="navbar-brand logo"><img src="/logo.png"/></a>
+          </div>
+          <div id="bs-example-navbar-collapse-1" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <% @page.each do |page| %>
+              <li><a href=<%=  page.url %>><%=  page.title %></a></li>
+            <% end %>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+<div class="middel_wraper feature_section">
+    <div class="container">
+        <div class="row text-center">
+                <h2 class="page_title">Features  </h2>
+        
+        <div class="feature_left_right">
+          <div class="col-sm-6 feature_descrip">
+            <h2 class="descrip_title">Contact Emergency Services <br> Worldwide</h2>
+            <p class="descrip">Location based direct call to local emergency services around the globe: Ambulance, police &amp; fire department using the SOS Buttons. Share current location with first respondents.</p>
+          </div>
+          <div class="col-sm-6">
+            <div class="screen_img"><img alt="" src="/feature_worldwide.png"></div>
+          </div>
+        </div>
+        
+        </div>
+    </div>
+  
+  <div class="bottom_saperator"></div>
+  
+  <div class="container">
+        <div class="row ">
+        <div class="feature_left_right">
+          <div class="col-sm-6">
+            <div class="screen_img"><img alt="" src="/feature_provider.png"></div>
+          </div>
+          <div class="col-sm-6 feature_descrip">
+            <h2 class="descrip_title">Find and Access Medical Service <br>Providers</h2>
+            <p class="descrip">At time of need, based on actual location, access and reach local doctors, hospitals, dentists and pharmacies that are covered under the customer travel insurance. </p>
+          </div>
+        </div>
+        </div>
+    </div>
+  
+  <div class="available_download">
+    <h1>Download now!</h1>
+    <h3>AVAILABLE IN</h3>
+    
+    <div class="download_playstore_icon">
+      <a class="download_apple" href=""> <span>DOWNLOAD<img alt="" src="/apple_icon.png"></span> </a>
+      <a class="download_android" href=""> <span> DOWNLOAD <img alt="" src="/android_icon.png"></span> </a>
+    </div>
+    
+  </div>
+  
+  <div class="container">
+  <div class="row ">
+  <div class="feature_left_right">
+    <div class="col-sm-6 feature_descrip">
+      <h2 class="descrip_title">Manage and Share Personal <br> Health  Record</h2>
+      
+      <ul class="plus_bullet">
+        <li> <span>Upload relevant medical profile </span> Blood type, allergies &amp; sensitivities, chronic conditions &amp; medications.</li>
+        <li> <span> Update crucial medical events</span> Special conditions, tests (ECGs, blood tests, CT scans), treatments, hospitalization, etc.</li>
+        <li><span>Share with local health providers</span></li>
+      </ul>
+      
+    </div>
+    <div class="col-sm-6">
+      <div class="screen_img"><img alt="" src="/feature_health_record.png"></div>
+    </div>
+  </div>
+  
+  </div>
+  </div>
+  
+  <div class="bottom_saperator"></div>
+  
+  <div class="container">
+  <div class="row ">
+  <div class="feature_left_right">
+  <div class="col-sm-6">
+      <div class="screen_img"><img alt="" src="/feature_travel_profile.png"></div>
+    </div>
+    <div class="col-sm-6 feature_descrip travel_profile">
+      <h2 class="descrip_title">Manage Personal Travel Profile</h2>
+      
+      <ul class="plus_bullet">
+        <li> <span>Add kids medical profiles </span></li>
+        <li> <span> Update flight itinerary</span> </li>
+        <li><span>Update travel insurance policy </span></li>
+        <li><span>Upload travel documentation </span></li>
+      </ul>
+      
+    </div>
+    
+  </div>
+  
+  </div>
+  </div>
+  
+  
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="footer-part clearfix">
+      <div class="row">
+        <div class="col-sm-4 col-md-3 col-lg-3">
+          <div class="contact-info">
+            <h3>Contact Info</h3>
+            <ul>
+              <li class="email-icon"><a href="http://www.evincedev.com/blog/">Blog </a></li>
+            </ul>
+            <div class="follow-us">
+              <h3>Follow us :</h3>
+              <ul class="social-links">
+                <li><a href="https://www.facebook.com/EvinceDevelopment" class="fb-icon"></a></li>
+                <li><a href="https://twitter.com/evincedev" class="twi-icon"></a></li>
+                <li><a href="https://plus.google.com/+EvinceDevelopmentPvtLtd" class="gool-pul-icon"></a></li>
+                <li><a href="https://www.linkedin.com/company/evince-development" class="link-icon"></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-5 col-lg-5">
+          <div class="contact-info">
+            <h3>Availble on</h3>
+            <div class="availble-download"><a href="#"><img src="/availble-download-iphone.png" alt=""/></a></div>
+            <div class="availble-download"><a href="#"><img src="/availble-download-android.png" alt=""/></a></div>
+          </div>
+        </div>
+        <div class="col-sm-3 col-md-3 col-lg-3">
+          <div class="contact-info">
+            <h3>Subscribe for newsleter</h3>
+            <input placeholder="Enter your email address.." class="form-control subscribe-email"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="design-by text-center">Copyright © 2012 - 2017 . All Rights Reserved -<a href="http://www.evincedev.com/" rel="nofollow" target="_blank"> Evince Development Pvt.Ltd.</a>  <a href="http://www.evincedev.com/site-map">Sitemap</a></div>
+    </div>
+  </div>
+</div>
+<%= javascript_include_tag "vendors/jquery-1.11.2.min.js"%>
+<%= javascript_include_tag "vendors/owl.carousel.js"%>
+<%= javascript_include_tag "vendors/bootstrap.js"%>
+<script type="text/javascript"> 
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({        
+         items : 1,
+            pagination:true,
+            navigation:false,
+            slideSpeed : 1000,
+            singleItem :true,
+            autoPlay:true 
+        });
+  });
+   </script>
+</body>
+</html>

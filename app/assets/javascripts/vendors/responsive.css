@@ -1,0 +1,359 @@
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{background:none;}
+@media screen and (min-width:1200px){
+
+
+}
+
+@media screen and (min-width:1200px) and (max-width:1400px){
+  .banner-inner h1{font-size: 37px; line-height: 58px}
+  .banner-download {margin-top: 30px;}
+.banner-cont {padding: 0;top: 50%;transform: translateY(-50%);}
+#owl-demo .item img {display: block;height: 540px;width: 100%;}
+
+
+}
+
+
+@media screen and (min-width:1024px) and (max-width:1250px){
+
+/*Team Page*/
+.team_avtaar_icon_shadow, .team_avtaar_icon {height:150px; width:150px;}
+.team_avtaar_icon {left:20px; top:20px; padding:20px;}
+.team_detail_right {width: 75% !important; padding:20px 0 20px 0px !important}
+
+}
+
+
+@media screen and (min-width:992px) and (max-width:1199px){
+.logo {width:80%; padding:10px 0 0 10px}
+.nav { margin: 10px 0 0;}
+.navbar-collapse {float: right;padding: 19px 0 0;width: 50%;}
+.navbar-default .navbar-nav > li > a {margin: 0 28px 0 0; font-size:17px;}
+.banner-inner {padding: 40px;width: 680px;}
+
+.banner-inner h1 {font-size:30px; line-height:45px}
+.banner-inner h1 span {font-size:33px;}
+.banner-cont p{font-size:23px;}
+.banner-download {margin-top: 30px;}
+.btn-download{margin-right:5px;}
+.travel-main p {font-size:22px; line-height:34px;}
+.travel-main h2 {font-size:36px; margin-bottom:20px;}
+.travel, .our-solution {padding:40px 0}
+.travel-head .col-sm-7 {width:100%}
+.travel-gird-box {width:305px;}
+.travelers-right{padding:32px 40px 25px;}
+.our-people {padding: 135px 0 62px;}
+
+.travelers-right ul li { font-size:16px; margin-bottom:14px; padding-left: 35px;}
+.main_banner .owl-theme .owl-controls .owl-page span{width:15px; height:15px; margin:0 5px;}
+.solution-gird p{line-height:40px;font-size:21px;}
+.solution-gird h2{font-size: 32px;line-height: 40px;}
+.contact-info h3, .follow-us h3 {font-size:14px; margin-top:0; margin-bottom:10px;}
+.subscribe-email{font-size:13px;}
+.btn-download{font-size:15px;}
+.solution-gird .learn-more{background-position:85% center;}
+.social-links li a{margin:0 7px 0 0}
+
+
+/*Contact Us Page Section*/
+.contact_form_section .page_title {margin:0 20px;}
+.contact_form_section .form-control {height:42px;}
+.contact_form_section textarea.form-control { height: 60px !important;}
+
+
+/*Feature Section*/
+.feature_section .plus_bullet li, .feature_section .travel_profile .plus_bullet li {
+  background-position:  left 20px;
+  padding: 10px 30px;
+}
+.feature_section .plus_bullet li span {
+  font-size: 18px;
+}
+
+/*Team Page*/
+.team_avtaar_icon_shadow, .team_avtaar_icon {height:180px; width:180px;}
+.team_avtaar_icon {left: 0;padding: 20px;top: 42px;}
+.team_detail_right {float: right;padding: 20px 0 20px 20px;width: 70%;}
+
+.main_banner .owl-controls{bottom:10px;left: 50%;position: absolute;top: inherit;transform:translateX(-50%);z-index: 99;}
+#owl-demo .item img {height:390px;}
+.banner-cont{padding:40px 0 60px; top:0px;}
+.our-solution::after{bottom:-85px}
+.travel-grid{padding:30px 0px;}
+.travel-gird-box{padding:25px; vertical-align:top;}
+.owl-theme .owl-controls .owl-page{display:inline-block;}
+.travel-box{max-width:700px;padding: 34px 20px;}
+
+/**/
+
+.descrip_title{font-size:25px}
+.feature_section .descrip {font-size: 19px;line-height: 32px;text-align: justify;}
+.descrip_title br{display:none;}
+.vision_section .left_column .text{font-size: 20px}
+.left-section{width:53%; padding: 35px 40px;}
+.screen_detail_text{font-size: 21px;}
+.pdf-doc-screen {margin: 50px 0 -110px;}
+.vision_section .page_title_large{font-size: 22px;}
+
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+.logo {width:80%; padding:10px 0 0 10px}
+.nav { margin: 10px 0 0;}
+.navbar-collapse {float: right;padding: 19px 0 0;width: 50%;}
+.navbar-default .navbar-nav > li > a {margin: 0 25px 0 0; font-size:14px;}
+.banner-inner{padding:30px;width: 90%;}
+.banner-inner h1 {font-size:30px; line-height:45px}
+.banner-inner h1 span {font-size:33px;}
+.banner-cont p{font-size:23px;}
+.banner-download {margin-top: 30px;}
+.btn-download{margin-right:5px;}
+.travel-main p {font-size:22px; line-height:34px;}
+.travel-main h2 {font-size:36px; margin-bottom:20px;}
+.travel, .our-solution {padding:40px 0}
+.travel-head .col-sm-7 {width:100%}
+.travel-gird-box {width:305px;}
+.travelers-right {margin-top: 20px;padding: 20px 20px;}
+.travelers-right h3 {font-size:22px;}
+.travelers-right ul {margin:24px 0 0;}
+.travelers-right h4{font-size:20px; text-transform:none;}
+.our-people {padding: 135px 0 62px;}
+
+.travelers-right ul li { font-size:16px; margin-bottom:14px; padding-left: 35px;}
+.main_banner .owl-theme .owl-controls .owl-page span{width:12px; height:12px; margin:0 5px;}
+
+.solution-gird h2 {font-size: 26px;line-height: 32px; margin:0 0 10px; text-transform:none;}
+.solution-gird p {font-size:17px;line-height:26px;margin: 0 0 10px; text-align:justify;}
+.contact-info h3, .follow-us h3 {font-size:14px; margin-top:0; margin-bottom:10px;}
+.subscribe-email{font-size:13px;}
+.btn-download{font-size:15px;}
+.solution-gird .learn-more{background-position:85% center;}
+.social-links li a{margin:0 7px 0 0}
+
+
+/*Contact Us Page Section*/
+.contact_form_section .form-control {height:42px;}
+.contact_form_section .btn.btn-primary.submit_btn{margin: 20px 0 40px;}
+
+
+/*Feature Section*/
+.feature_section .plus_bullet li, .feature_section .travel_profile .plus_bullet li {
+  background-position:  left 20px;
+  padding: 10px 30px;
+}
+.feature_section .plus_bullet li span {
+  font-size: 18px;
+}
+
+/*Team Page*/
+.team_avtaar_icon_shadow, .team_avtaar_icon {height:180px; width:180px;}
+.team_avtaar_icon {left:0px; top:42px; padding:20px;}
+.team_detail_right {float: right;padding: 20px 0 20px 20px;width: 70%;}
+
+.main_banner .owl-controls{bottom:10px;left: 50%;position: absolute;top: inherit;transform:translateX(-50%);z-index: 99;}
+#owl-demo .item img {height:350px;}
+.banner-cont{padding:40px 0 60px; top:0px;}
+.our-solution::after{bottom:-85px}
+.travel-grid{padding:30px 0px;}
+.travel-gird-box{padding:25px; vertical-align:top;}
+.owl-theme .owl-controls .owl-page{display:inline-block;}
+
+/**/
+.descrip_title{font-size:22px}
+.feature_section .descrip {font-size:17px;line-height:27px;text-align: justify;}
+.descrip_title br{display:none;}
+.contact_form_section .contact_form {margin: 0;}
+.contact_form_section .mail_text {font-size: 22px;}
+.contact_form_section .contact_img{margin-right:0px;}
+.contact_form_section .page_title {margin: 10px 0 0;}
+
+.left-section{width:54%; padding:35px 30px;}
+.screen_detail_text {font-size: 18px;line-height: 28px;}
+.pdf-doc-screen {margin: 50px 0 -110px;}
+.vision_section .page_title_large{font-size: 22px; line-height: 33px}
+
+}
+
+
+
+@media screen and (max-width:767px){
+.logo {width:70%; padding:4px 0 0 20px; max-width:260px}	
+.nav.navbar-nav.navbar-right {margin-top:0px;}
+
+.nav > li {width:100%;}
+.navbar-default .navbar-nav > li > a {
+  border-top:1px solid #d4d4d4;
+  font-size: 16px;
+  margin: 0;
+  padding: 16px 20px;
+  position: relative;
+  width: 100%;
+}
+.navbar-default{position:relative;}
+.navbar-default .navbar-collapse {
+  background: #e4e4e4 none repeat scroll 0 0;
+  border: 0 none;
+  box-shadow: none;
+  padding: 0;
+  position: absolute;
+  top: 91px;
+  width: 100%;
+  z-index: 99;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > .active > a {box-shadow:none;}
+
+.banner-inner {background: rgba(255, 255, 255, 0.5) none repeat scroll 0 0;padding:25px 10px;width: 100%;}
+.banner-inner h1 {font-size: 18px;line-height: 28px;}
+.banner-inner h1 span, .banner-cont p  {font-size:18px; letter-spacing:0}
+.btn-download {margin-bottom:10px;}
+.main_banner .owl-theme .owl-controls .owl-page span {height:12px; width:12px}
+.apple-icon, .android-icon {background-position: 13px center;}
+.btn-download {font-size: 13px;margin-right: 5px;padding: 12px 30px 13px 40px;}
+.btn-download.learn-more {padding: 13px 40px 13px 20px; margin-bottom:0px;}
+.banner-download {margin-top:0}
+.banner-cont {top:65%;}
+
+#owl-demo .item img {height:auto}
+.travel {padding:20px 0}
+.travel-grid{padding:20px 0}
+.travel-main h2, .solution-gird h2 {font-size:26px; margin-bottom:10px;}
+.travel-main p, .solution-gird p {font-size:16px;line-height: 30px; text-align:justify;}
+.our-solution::after{  bottom: -23px;}
+.solution-gird > h2 {font-size: 23px;line-height: 30px;text-transform: none;}
+.our-people .solution-img {margin-bottom: 40px;}
+
+.travel-main p br, .solution-gird p br{display:none;}
+.travel-box {padding:20px;}
+.travel-gird-box {width:100%; padding:20px;}
+.travel-gird-box h2{font-size:14px; line-height:20px;}
+.travelers-head .col-sm-3 {padding:0;}
+.travelers-iphone {text-align:center;}
+.travelers-right {margin-top: 40px;padding: 40px 20px;} 
+.travelers-right h3 {font-size: 20px;line-height: 28px;}
+.travelers-head .left-padd {padding:0 20px;}
+.travelers-right h4{font-size:15px}
+.travelers-right ul li{font-size:16px; margin-bottom:12px;}
+.main_banner .owl-controls {top:35%;}
+.solution-gird .learn-more {background-position:95% 15px;}
+.solution-img {padding-top:40px;}
+.our-solution, .our-people {padding: 40px 0;}
+.follow-us {margin-top:25px;}
+.page_title, .vision_section .page_title_large, .descrip_title {font-size:26px; line-height:30px;}
+/*Contact Us Page Section*/
+.contact_form_section .page_title {margin-left:0}
+.contact_form_section .contact_form  {margin:0}
+.contact_form_section .btn.btn-primary.submit_btn {max-width:100%}
+.contact_form_section .contact_img {margin-right:0; margin-top:10px; margin-bottom:20px;}
+
+/*Vsion Page*/
+.vision_section .left_column {width:100%; margin-top:60px; margin-left:0}
+.vision_section .left_column.right_column { margin-left:0}
+.vision_section .left_column .icon_img img {top: -45px; left:43%}
+.vision_section .screen_detail {float:none}
+.screen_detail_text, .screen_detail_right {float: none;font-size: 20px; margin: 0; padding: 30px; width: 100%;}
+.medical_summry_screen { padding: 40px 20px; margin:0}
+
+/*Feature Section*/
+.feature_section .available_download h1 {font-size:30px;}
+.feature_section .download_apple, .feature_section .download_android {margin:10px 0}
+.feature_section .plus_bullet li{padding:15px 30px; background-position:left 24px;}
+.feature_section .plus_bullet li span{font-size:18px}
+.feature_section .download_playstore_icon {margin-top: 30px;}
+.feature_section .screen_img {text-align:center}
+.feature_section .feature_descrip {margin:0}
+.feature_section .feature_left_right {margin:10px 0}
+.feature_section .descrip {text-align:justify}
+
+/**/
+.descrip_title{font-size:22px}
+.feature_section .descrip {font-size:17px;line-height:27px;text-align: justify;}
+.descrip_title br{display:none;}
+.feature_section .screen_img {margin: 14% 2%;text-align: center;}
+.feature_section .available_download h3 {font-size: 22px;padding-top: 10px;}
+
+
+
+/*Team Page*/
+.team_avtaar_icon_shadow { margin: 0 auto; width:100%; float:left}
+.team_avtaar_icon { height: 195px; margin:20px auto 0; width:189px; padding:0px;left:0px; top: 0px;}
+.team_detail_section {padding:20px 0}
+.team_detail_right {float:left}
+
+.main_banner .owl-controls{bottom:10px;left: 50%;position: absolute;top: inherit;transform:translateX(-50%);z-index: 99;}
+#owl-demo .item img {height:350px;}
+.banner-cont{padding:40px 0 60px; top:0px;}
+.travelers {padding: 70px 0;}
+.contact-info {margin-bottom: 30px;}
+.availble-download {display: inline-block;width:150px;}
+.solution-gird .learn-more{margin-top:15px;}
+.navbar-toggle{margin-top: 24px; background:none; border:0px;}
+.navbar-default .navbar-toggle .icon-bar {background-color: #D03568;}
+.travel-main.text-center > p {padding: 0 10px;text-align: center;}
+.owl-theme .owl-controls .owl-page{display:inline-block; margin: 0px;}
+.solution-img {padding: 30px 0;text-align: center;}
+.solution-img img{max-width: 370px;position: relative;z-index: 99; width:100%;}
+.travelers-iphone > img {max-width: 220px;width: 100%;}
+.feature_section .feature_left_right{float:none;}
+.feature_section .feature_descrip {margin: 0;padding-bottom: 30px;}
+.contact_form_section .contact_form label span{font-size: 20px;}
+
+.team_detail_right h3{font-size: 20px; margin-top: 0px;}
+.team_detail_right p{font-size: 17px;}
+.team_detail_section{margin-bottom: 0px;}
+
+.left-section{width:54%; padding:35px 30px;}
+.screen_detail_text {font-size: 16px;line-height: 26px;}
+.pdf-doc-screen {margin:20px 0 30px;}
+.vision_section .page_title_large {font-size: 18px;line-height: 27px;}
+.page_title::after{ margin:10px auto 0 -20px; left: 50%;}
+.vision_section .left_column {padding: 50px 20px 15px;}
+.vision_section .left_column .text br{display: none;}
+.screen_detail_right {clear: both;float: left;margin:40px 0px;width: 100%;}
+.left-section {margin: 0;padding: 0;width: 100%;}
+.left-section::after{display: none;}
+
+
+
+}
+
+@media screen and (min-width:640px) and (max-width:767px){
+ 
+.banner-inner{padding:6%;}
+.banner-inner h1 span, .banner-cont p {font-size: 1.3em;letter-spacing: 0;}
+.banner-inner h1 {font-size:1.9em;line-height: 32px;}
+.banner-inner > p {font-size: 1.6em;margin-top: 10px;}
+.travel-main.text-center > p {padding: 0 20px;text-align: center;}
+.travel-gird-box {padding: 20px;width: 46%;}
+.feature_section .feature_left_right {margin: 10px 15px;}
+.footer .col-sm-4{float: left;width: 50%;}
+.footer .col-sm-4:nth-child(3n){width:100%; clear:both;}
+.availble-download {width: 140px;}
+.screen_detail_text {font-size: 22px;line-height: 34px;}
+.vision_section .page_title_large {font-size: 22px;line-height: 30px;}
+
+
+ 
+}
+@media screen and (max-width:479px){
+.banner-cont {top: 0;}
+	
+	/*Vsion Page*/
+.vision_section .left_column {width:100%; margin-top:60px; margin-left:0}
+.vision_section .left_column.right_column { margin-left:0}
+.vision_section .left_column .icon_img img {top: -45px; left:37%}
+
+/*contact Page*/
+.contact_form_section .mail_text {font-size:18px;}
+
+
+ }
+
+@media screen and (max-width:359px){
+.banner-inner h1 span, .banner-cont p {font-size: 22px;letter-spacing: 0;}
+.banner-inner h1 {font-size: 1.2em;line-height:25px;}
+.banner-cont p{font-size:14px;}
+.main_banner .owl-controls{bottom:-5px;}
+.navbar-default .navbar-collapse{top:74px}
+.btn-download {font-size: 12px;margin-right: 5px;padding: 10px 20px 13px 39px;}
+
+}

@@ -1,0 +1,313 @@
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Update Team</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+      $('#delete-btn').click(function(){ 
+      $('.modal-confirm').modal({keyboard : true, backdrop : true });
+  $('.modal-confirm .modal-header h4').text('Delete Account');
+  $('.modal-confirm .modal-body p').html('Are you sure you want to delete your account?');
+  $('.modal-confirm .cancel').html('Cancel');
+  $('.modal-confirm .submit').html('Delete');
+  $('.modal-confirm .submit').addClass('btn-danger');
+  return false;
+});
+  });
+  $(document).ready(function(){
+      $('#delete_ok').click(function(){
+        window.location.href = '/users';
+        });
+  });
+  </script>
+<style type="text/css">
+  .edit_butn .form-buttons {
+    float: left;
+  }
+
+  .button_to {
+    display: inline;
+}
+</style>
+<!-- store the userId on the client side in a hidden input field //-->
+<input type="hidden" value="value" id="userId"%>
+<%= tinymce_assets %>
+<%= stylesheet_link_tag  "vendors/bootstrap/dist/css/bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/font-awesome/css/font-awesome.min.css"%>
+<%= stylesheet_link_tag  "vendors/nprogress/nprogress.css"%>
+<%= stylesheet_link_tag  "vendors/iCheck/skins/flat/green.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-bs/css/dataTables.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "build/css/custom.min.css"%>
+</head>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div style="border: 0;" class="navbar nav_title"><%= link_to 'Evince!', authenticated_root_path, class: 'site_title' %></div>
+          <div class="clearfix"></div>
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-edit"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><%= link_to 'Manage Users', users_path %></li>
+                    <li><%= link_to 'Manage Roles', role_index_path %></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-edit"></i> CMS <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><%= link_to 'Manage Pages', pagess_index_path %></li>
+                    <li><%= link_to 'Manage Testimonial', testimonial_index_path %></li>
+                <li><%= link_to 'Manage Sliders', slider_index_path %></li>
+                <li><%= link_to 'Manage Team', team_index_path %></li>
+                    <li><%= link_to 'Manage Content', content_index_path %></li>
+                    <li><%= link_to 'Manage About Data', about_index_path %></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-desktop"></i> General Configuration <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><%= link_to 'General', config_index_path %></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-desktop"></i> Contact US <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><%= link_to 'Enquiry', enquiry_index_path   %></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /sidebar menu-->
+          <!-- /menu footer buttons-->
+           <div class="sidebar-footer hidden-small"><a data-toggle="tooltip" data-placement="top" title="Settings"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span></a><a data-toggle="tooltip" data-placement="top" title="FullScreen"><span aria-hidden="true" class="glyphicon glyphicon-fullscreen"></span></a><a data-toggle="tooltip" data-placement="top" title="Lock"><span aria-hidden="true" class="glyphicon glyphicon-eye-close"></span></a><a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout"><span aria-hidden="true" class="glyphicon glyphicon-off"></span></a></div>
+          <!-- /menu footer buttons-->
+        </div>
+      </div>
+      <!-- top navigation-->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle"><a id="menu_toggle"><i class="fa fa-bars"></i></a></div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <li><div id="btn-logout"><%= link_to "Log out",users_destroyy_path, class: 'navbar-btn btn btn-primary' %></div></li>
+                   
+                  </a>
+                  
+                    
+                </li>
+
+                <li role="presentation" class="dropdown">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                    
+                  </a>
+                <ul id="menu1" role="menu" class="dropdown-menu list-unstyled msg_list">
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li>
+                    <div class="text-center"><a><strong>See All Alerts</strong><i class="fa fa-angle-right"> </i></a></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation-->
+      <!-- page content-->
+      <div role="main" class="right_col">
+        <div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Manage Team Data <small> </small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench"></i></a>
+                      <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Settings 1</a></li>
+                        <li><a href="#">Settings 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div id="account-form-container">
+                    <%= form_for(:team , :html => {:class => team_path, :role => "form" ,:id => 'account-form'}, :url => {:action => :update}, :method => 'PUT') do |f| %>
+                      <div class ="form-horizontal well">
+                        <h3>Update Team</h3>
+                        <hr/>
+                        <div class="form-group">
+                          <%= f.label :image, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <div class="upload_new1">
+                              <%=  @team.image.file.filename %><a  href="#" onclick="return false;">OR UPLOAD</a>
+                              </div>
+                            </div>
+                              <div class="col-sm-8">
+                            <%= f.file_field :image, :autofocus => true, :id => 'img-tf1', :class => "new_upload" %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :name, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.text_field :name, :autofocus => true, :class => 'form-control', :id => 'title-tf' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :designation, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.text_field :designation, :autofocus => true, :class => 'form-control', :id => 'desg-tf' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :description, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            
+                            <%= f.text_area :description, :autofocus => true, :class => 'tinymce', :id => 'desc-tf' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :display_order, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.text_field :display_order, :class => 'form-control', :id => 'order-tf' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :status, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <% if @team.status == 'Enabled' %>
+                          <%= f.radio_button :status, 'Enabled', :checked => true %><spam class= enb>Enable</spam>
+                          <%= f.radio_button :status, 'Disabled' %><spam class= enb>Disable</spam>
+                          <% else %>
+                          <%= f.radio_button :status, 'Enabled' %><spam class= enb>Enable</spam>
+                          <%= f.radio_button :status, 'Disabled', :checked => true %><spam class= enb>Disable</spam>
+                          <% end %>
+                          </div>
+
+                        </div>
+                        <hr/>
+                      <hr/>
+                      <div class="edit_butn">
+                      <div class="form-buttons">
+                      <%= f.submit 'Update', :class => "btn btn-primary" , :id => 'update_page_btn' %></div>
+                    <% end %>
+                      <div class="form-buttons">
+                       <button class="btn btn-danger" id='delete-btn'>Delete</button>
+                       <%= link_to 'Back', { controller: 'team', action: 'index'}, class: "btn btn-primary" %>
+                      </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /page content-->
+      <!-- footer content-->
+      <footer>
+        <div class="copyright-text">Copyright © 2012 - 2017 . All Rights Reserved -<a href="http://www.evincedev.com/" rel="nofollow" target="_blank"> Evince Development Pvt.Ltd.</a>  <a href="site-map">Sitemap</a></div>
+        <div class="clearfix"></div>
+      </footer>
+    </div>
+  </div>
+ <div class="modal-form-errors modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close">x</button>
+        <h4>Whoops!</h4>
+      </div>
+      <div class="modal-body">It looks like there was a problem.
+        <ul></ul>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-alert modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--button.close(data-dismiss='modal') x-->
+        <h4></h4>
+      </div>
+      <div class="modal-body">
+        <p>Your account has been Updated.</br>Click OK to return to the User page</p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" id="ok" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-confirm modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button data-dismiss="modal" class="close">x</button>
+        <h4></h4>
+      </div>
+      <div class="modal-body">
+        <p></p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" class="cancel btn btn-default">Cancel</button>
+        <%= button_to "Delete", team_path, :method => :delete, :class => 'submit btn btn-primary', :id => 'delete_ok' %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-alert modal fade">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!--button.close(data-dismiss='modal') x-->
+        <h4></h4>
+      </div>
+      <div class="modal-body">
+        <p>Your account has been created.</br>Click OK to return to the User page</p>
+      </div>
+      <div class="modal-footer">
+        <button data-dismiss="modal" id="ok" class="btn btn-primary">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+<%= javascript_include_tag "vendors/jquery/dist/jquery.min.js"%>
+<%= javascript_include_tag "vendors/jquery-2.2.3.min.js"%>
+<%= javascript_include_tag "vendors/bootstrap/dist/js/bootstrap.min.js"%>
+<%= javascript_include_tag "vendors/fastclick/lib/fastclick.js"%>
+<%= javascript_include_tag "vendors/nprogress/nprogress.js"%>
+<%= javascript_include_tag "vendors/iCheck/icheck.min.js"%>
+<%= javascript_include_tag "build/js/custom.min.js"%>
+<%= javascript_include_tag "vendors/jquery.form.min.js"%>
+<%= javascript_include_tag "editteamValidator", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "editteam", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "editteamController", "data-turbolinks-track" => true %>
+<%= javascript_include_tag "slideedit", "data-turbolinks-track" => true %>
+<%= tinymce %>
+</html>

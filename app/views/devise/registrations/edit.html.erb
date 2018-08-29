@@ -1,41 +1,207 @@
-<div class="authform">
-  <h3>Edit <%= resource_name.to_s.humanize %></h3>
-  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :role => 'form'}) do |f| %>
-    <%= devise_error_messages! %>
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, :autofocus => true, class: 'form-control' %>
+  <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Update User</title>
+<style type="text/css">
+  .edit_butn .form-buttons {
+    float: left;
+}
+</style>
+<!-- store the userId on the client side in a hidden input field //-->
+<input type="hidden" value="value" id="userId"%>
+<%= stylesheet_link_tag  "vendors/bootstrap/dist/css/bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/font-awesome/css/font-awesome.min.css"%>
+<%= stylesheet_link_tag  "vendors/nprogress/nprogress.css"%>
+<%= stylesheet_link_tag  "vendors/iCheck/skins/flat/green.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-bs/css/dataTables.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css"%>
+<%= stylesheet_link_tag  "build/css/custom.min.css"%>
+</head>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div style="border: 0;" class="navbar nav_title"><a href="/home" class="site_title"><span>EVINCE!</span></a></div>
+          <div class="clearfix"></div>
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <div class="menu_section">
+              <ul class="nav side-menu">
+                <li><a><i class="fa fa-edit"></i> User Management <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><%= link_to 'Manage Users', users_path %></li>
+                    <li><a href="/roles">Manage Roles</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-edit"></i> CMS <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="/cms">Manage Pages</a></li>
+                    <li><a href="/testimonial">Manage Testimonials</a></li>
+                    <li><a href="/slider">Manage Sliders</a></li>
+                    <li><a href="/about">Manage Team</a></li>
+                    <li><a href="/pagecontext"> Manage Content</a></li>
+                    <li><a href="/teamabout"> Manage About Data</a></li>
+                  </ul>
+                </li>
+                <li><a><i class="fa fa-desktop"></i> General Configuration <span class="fa fa-chevron-down"></span></a>
+                  <ul class="nav child_menu">
+                    <li><a href="/general">General</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- /sidebar menu-->
+          <!-- /menu footer buttons-->
+          <div class="sidebar-footer hidden-small"><a data-toggle="tooltip" data-placement="top" title="Settings"><span aria-hidden="true" class="glyphicon glyphicon-cog"></span></a><a data-toggle="tooltip" data-placement="top" title="FullScreen"><span aria-hidden="true" class="glyphicon glyphicon-fullscreen"></span></a><a data-toggle="tooltip" data-placement="top" title="Lock"><span aria-hidden="true" class="glyphicon glyphicon-eye-close"></span></a><a data-toggle="tooltip" data-placement="top" title="Logout" href="/logout"><span aria-hidden="true" class="glyphicon glyphicon-off"></span></a></div>
+          <!-- /menu footer buttons-->
+        </div>
+      </div>
+      <!-- top navigation-->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle"><a id="menu_toggle"><i class="fa fa-bars"></i></a></div>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="javascript:;" data-toggle="dropdown" aria-expanded="false" class="user-profile dropdown-toggle"><img src="images/img.jpg" alt=""/>
+                  <spam>Welcome </spam><span class="fa fa-angle-down"></span></a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="javascript:;"> Profile</a></li>
+                  <li><a href="javascript:;"><span class="badge bg-red pull-right">50%</span><span>Settings</span></a></li>
+                  <li><a href="javascript:;">Help</a></li>
+                  <li>
+                    <div id="btn-logout" class="navbar-btn btn btn-danger"> Log Out</div>
+                  </li>
+                </ul>
+              </li>
+              <li role="presentation" class="dropdown"><a href="javascript:;" data-toggle="dropdown" aria-expanded="false" class="dropdown-toggle info-number"><i class="fa fa-envelope-o"></i><span class="badge bg-green">6</span></a>
+                <ul id="menu1" role="menu" class="dropdown-menu list-unstyled msg_list">
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li><a><span class="image"><img src="images/img.jpg" alt="Profile Image"/></span><span><span>John Smith</span><span class="time">3 mins ago</span></span><span class="message">Film festivals used to be do-or-die moments for movie makers. They were where...</span></a></li>
+                  <li>
+                    <div class="text-center"><a><strong>See All Alerts</strong><i class="fa fa-angle-right"> </i></a></div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation-->
+      <!-- page content-->
+      <div role="main" class="right_col">
+        <div>
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Manage User <small> </small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a></li>
+                    <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-wrench"></i></a>
+                      <ul role="menu" class="dropdown-menu">
+                        <li><a href="#">Settings 1</a></li>
+                        <li><a href="#">Settings 2</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a></li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div id="account-form-container">
+                    <%= form_for(:user , :html => {:class => users_path, :role => "form"}, url: users_path) do |f| %>
+                    <div class ="form-horizontal well">
+                      <h2>Edit Account</h2>
+                      <%= devise_error_messages! %>
+                      <hr/>
+                        <div class="form-group">
+                          <%= f.label :name, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.text_field :name, :autofocus => true, :class => 'form-control' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :email, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.email_field :email, :class => 'form-control' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :role, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                             <select name="cars" class = 'form-control'>
+                              <option value="">----Please Select----</option>
+                              <option value="admin">Admin</option>
+                              <option value="manager">Manager</option>
+                              <option value="emp">Employee</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :password, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.password_field :password, :class => 'form-control' %>
+                          </div>
+                        </div>
+                        <hr/>
+                        <h6 id="sub2"></h6>
+                        <div class="form-group">
+                          <%= f.label :password_confirmation, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <%= f.password_field :password_confirmation, :class => 'form-control' %>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <%= f.label :status, :class => "control-label col-sm-3" %>
+                          <div class="col-sm-9">
+                            <input type="radio", class="status" name="status_filter", value="Enabled", checked=status=="enable"><spam class= enb>Enable</spam>
+                            <input type="radio", class="status" name="status_filter", value="Disbaled", checked=status=="disbale"> <spam class= enb>Disable</spam>
+                      <hr/>
+                      <div class="edit_butn">
+                      <div class="form-buttons">
+                      <%= f.submit 'Update', :class => "btn btn-primary" %></div>
+                    <% end %>
+                      <div class="form-buttons">
+                       <%= button_to "Delete", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => "btn btn-danger" %>
+                      </div>
+                      </div>
+                      <div class="clearfix"></div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /page content-->
+      <!-- footer content-->
+      <footer>
+        <div class="copyright-text">Copyright © 2012 - 2017 . All Rights Reserved -<a href="http://www.evincedev.com/" rel="nofollow" target="_blank"> Evince Development Pvt.Ltd.</a>  <a href="site-map">Sitemap</a></div>
+        <div class="clearfix"></div>
+      </footer>
     </div>
-    <div class="form-group">
-      <%= f.label :email %>
-      <%= f.email_field :email, class: 'form-control' %>
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-      <% end %>
-    </div>
-    <fieldset>
-      <p>Leave these fields blank if you don't want to change your password.</p>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%= f.password_field :password, :autocomplete => 'off', class: 'form-control' %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password_confirmation %>
-        <%= f.password_field :password_confirmation, class: 'form-control' %>
-      </div>
-    </fieldset>
-    <fieldset>
-      <p>You must enter your current password to make changes.</p>
-      <div class="form-group">
-        <%= f.label :current_password %>
-        <%= f.password_field :current_password, class: 'form-control' %>
-      </div>
-    </fieldset>
-    <%= f.submit 'Update', :class => 'button right' %>
-  <% end %>
-</div>
-<div class="authform">
-<h3>Cancel Account</h3>
-<p>Unhappy? We'll be sad to see you go.</p>
-<%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete, :class => 'button right' %>
-</div>
+  </div>
+</body>
+<%= javascript_include_tag "vendors/jquery/dist/jquery.min.js"%>
+<%= javascript_include_tag "vendors/jquery-2.2.3.min.js"%>
+<%= javascript_include_tag "vendors/bootstrap/dist/js/bootstrap.min.js"%>
+<%= javascript_include_tag "vendors/fastclick/lib/fastclick.js"%>
+<%= javascript_include_tag "vendors/nprogress/nprogress.js"%>
+<%= javascript_include_tag "vendors/iCheck/icheck.min.js"%>
+<%= javascript_include_tag "build/js/custom.min.js"%>
+<%= javascript_include_tag "vendors/jquery.form.min.js"%>
+</body>
+</html>
